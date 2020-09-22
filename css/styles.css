@@ -5,14 +5,20 @@
 }
 
 .keystrokes{
-    padding: 10px;
+    padding: 20px;
     font-size: 24px;
     font-weight: bolder;
     width: 50px;
     height: 50px;
-    box-shadow: 3px 3px 5px black;
+    float: left;
+    background: grey;
+    color: white;
+    margin: 10px;
 }
 
 .sound{
-    font-size: small;
+    font-size: 2px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffc600;
 }
