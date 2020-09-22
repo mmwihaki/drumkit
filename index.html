@@ -44,8 +44,21 @@
 
     <script>
         window.addEventListener("keydown", function(e){
-            
-        })
+           const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+           const keystrokes = document.querySelector(`.keystrokes[data-key="${e.keyCode}"]`)
+           if(!audio) return; //end function
+           audio.currentTime = 0;//rewind to the start
+           audio.play();
+           keystrokes.classList.add("playing");
+        });
+
+        function removeTransition(e){
+            if(e.propertyName !== "transform") return; //skip 
+            this.classList.remove ("playing");
+        }
+
+        const keystrokes = document.querySelectorAll(".keystrokes");
+        keystrokes.forEach(keystrokes => keystrokes.addEventListener("transitionend", removeTransition));
     </script>
 </body>
 

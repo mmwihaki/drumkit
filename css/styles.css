@@ -1,3 +1,7 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .drumkit{
     background-color: white;
     padding: 200px;
@@ -14,6 +18,7 @@
     background: grey;
     color: white;
     margin: 10px;
+    transition: all 0.07s;
 }
 
 .sound{
@@ -21,4 +26,10 @@
     text-align: left;
     text-transform: uppercase;
     color: #ffc600;
+}
+
+.playing{
+    transform: scale(2.1);
+    border-color: orange;
+    box-shadow: 0 0 10px cyan;
 }
